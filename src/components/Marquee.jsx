@@ -14,8 +14,8 @@ export default function Marquee() {
   return (
     <div className="w-full bg-[#003594] text-white py-2 overflow-hidden whitespace-nowrap">
       <div className="animate-marquee flex gap-10 text-sm">
-        <span>Fly from Abuja to London Heathrow every Friday, Saturday, and Sunday starting 26 Oct 2025.</span>
-        <span>London Heathrow to Abuja same days. Starting 28 Oct 2025 fly Abuja-London Gatwick.</span>
+        <span>Fly from Abuja to London Heathrow Airport every Friday, Saturday, and Sunday starting 26 October 2025, and from London Heathrow to Abuja on the 28th October 2025, Fly Abuja-London Gatwick and London Gatwick-Abuja every Tuesday, Wednesday, and Thursday. Book now and enjoy our best fares! </span>
+        <span>Fly from Abuja to London Heathrow Airport every Friday, Saturday, and Sunday starting 26 October 2025, and from London Heathrow to Abuja on the 28th October 2025, Fly Abuja-London Gatwick and London Gatwick-Abuja every Tuesday, Wednesday, and Thursday. Book now and enjoy our best fares! </span>
       </div>
     </div>
   );

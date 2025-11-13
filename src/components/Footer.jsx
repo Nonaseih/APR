@@ -7,7 +7,7 @@
     * MODIFICATION LOG
     * - Version         : 1.0.0
     * - Date            : 10/11/2025
-    * - Author          : fortu
+    * - Author          : fortune
     * - Modification    : 
 **/
 /**

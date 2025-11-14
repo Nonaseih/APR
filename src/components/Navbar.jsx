@@ -2,19 +2,20 @@
     * @description      : 
     * @author           : fortu
     * @group            : 
-    * @created          : 11/11/2025 - 10:20:49
+    * @created          : 14/11/2025 - 13:52:11
     * 
     * MODIFICATION LOG
     * - Version         : 1.0.0
-    * - Date            : 11/11/2025
+    * - Date            : 14/11/2025
     * - Author          : fortu
     * - Modification    : 
 **/
 /**
- * Air Peace Navbar — Full Blue Hover + Blue Top Border For All Items
+ * Air Peace Navbar — Fixed + Scroll Behavior + Lucide Arrow
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { ChevronDown } from "lucide-react";
 import Dropdown from "./Dropdown/Dropdown";
 import DropdownDiscover from "./Dropdown/DropdownDiscover";
 
@@ -39,22 +40,37 @@ const navItems = {
 
 export default function Navbar() {
   const [openNav, setOpenNav] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Scroll Listener
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) setScrolled(true);
+      else setScrolled(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const baseClass =
-    "cursor-pointer pt-1 pb-[6px] transition border-t-4 border-transparent";
-
-  const hoverClass =
-    "hover:text-[#003594] hover:border-[#003594]";
+    "cursor-pointer pt-1 pb-[6px] transition border-t-4 border-transparent flex items-center gap-1";
+  const hoverClass = "hover:text-[#003594] hover:border-[#003594]";
 
   return (
-    <nav className="w-full bg-white shadow">
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between px-8 py-4">
+    <nav
+      className={`w-full bg-white shadow z-50 transition-all duration-300 ${
+        scrolled ? "fixed top-0" : "fixed top-21"
+      }`}
+    >
+      <div className="max-w-[1100px] mx-auto flex items-center justify-between px-8 py-4">
 
-        <img src="./images/Api1.png" className="h-10" />
+        {/* LOGO */}
+        <img src="./images/Api1.png" className="h-6" />
 
+        {/* NAV ITEMS */}
         <ul className="flex items-center gap-10 text-[15px] font-medium">
 
-          {/* HOME */}
           <li className={`${baseClass} ${hoverClass}`}>HOME</li>
 
           {/* DISCOVER */}
@@ -65,13 +81,10 @@ export default function Navbar() {
               openNav === "discover" ? "text-[#003594] border-[#003594]" : ""
             }`}
           >
-            DISCOVER ▼
-            {openNav === "discover" && (
-              <DropdownDiscover items={navItems.discover} />
-            )}
+            DISCOVER <ChevronDown size={14} />
+            {openNav === "discover" && <DropdownDiscover items={navItems.discover} />}
           </li>
 
-          {/* BOOK */}
           <li className={`${baseClass} ${hoverClass}`}>BOOK</li>
 
           {/* TRAVEL */}
@@ -82,13 +95,10 @@ export default function Navbar() {
               openNav === "travel" ? "text-[#003594] border-[#003594]" : ""
             }`}
           >
-            TRAVEL ▼
-            {openNav === "travel" && (
-              <Dropdown items={navItems.travel} />
-            )}
+            TRAVEL <ChevronDown size={14} />
+            {openNav === "travel" && <Dropdown items={navItems.travel} />}
           </li>
 
-          {/* ROUTES */}
           <li className={`${baseClass} ${hoverClass}`}>ROUTES</li>
 
           {/* MEDIA */}
@@ -99,17 +109,13 @@ export default function Navbar() {
               openNav === "media" ? "text-[#003594] border-[#003594]" : ""
             }`}
           >
-            MEDIA ▼
-            {openNav === "media" && (
-              <Dropdown items={navItems.media} />
-            )}
+            MEDIA <ChevronDown size={14} />
+            {openNav === "media" && <Dropdown items={navItems.media} />}
           </li>
 
-          {/* CAREERS */}
           <li className={`${baseClass} ${hoverClass}`}>CAREERS</li>
 
         </ul>
-
       </div>
     </nav>
   );

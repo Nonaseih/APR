@@ -19,7 +19,7 @@ export default function Footer() {
     <footer className="w-full bg-[#002A6E] text-white pt-16 pb-6">
 
       {/* TOP GRID */}
-      <div className="max-w-[1300px] mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10">
+      <div className="max-w-[1100px] mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10">
 
         {/* Information */}
         <div>
@@ -130,7 +130,7 @@ export default function Footer() {
           <a href="#">
             <img src="https://i.imgur.com/kzVbLrF.png" className="h-12" />
           </a>
-          <a href="#">
+          <a hrAef="#">
             <img src="https://i.imgur.com/skFt8Sg.png" className="h-12" />
           </a>
         </div>

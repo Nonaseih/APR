@@ -25,7 +25,7 @@ export default function FlightSearchBox() {
 
   return (
     <div className="w-full flex justify-center mt-16 mb-24">
-      <div className="w-full max-w-[1250px] bg-white shadow-[0_4px_25px_rgba(0,0,0,0.1)] rounded-xl overflow-hidden">
+      <div className="w-full max-w-[1100px] bg-white shadow-[0_4px_25px_rgba(0,0,0,0.1)] rounded-xl overflow-hidden">
 
         {/* Tabs */}
         <div className="flex h-[58px]">

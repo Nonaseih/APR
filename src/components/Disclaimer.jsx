@@ -12,7 +12,7 @@
 **/
 export default function Disclaimer() {
   return (
-    <div className="border-2 border-[#be3a34] bg-[#fdf5f5] p-6 rounded-lg mb-16">
+    <div className="border-2 border-[#be3a34] bg-[#fdf5f5] p-6 rounded-lg mb-16 ">
       <h2 className="text-[#be3a34] text-xl font-bold mb-3">DISCLAIMER</h2>
 
       <p className="text-[#be3a34] leading-relaxed">

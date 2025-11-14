@@ -48,22 +48,21 @@ export default function Carousel() {
   }, []);
 
   return (
-    <div className="relative w-full h-[500px] overflow-hidden">
+    <div className="relative w-full h-[470px] overflow-hidden ">
 
       {sliderData.map((s, i) => (
         <div
           key={i}
-          className={`absolute inset-0 transition-opacity duration-[1200ms] ${
+          className={`absolute inset-0 transition-opacity duration-1200 ${
             index === i ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* FIX: Reduced zoom */}
           <img
             src={s.img}
             className="w-full h-full object-fill object-center"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#002b5c]/80 to-transparent flex flex-col justify-center px-20">
+          <div className="absolute inset-0 bg-linear-to-r from-[#002b5c]/80 to-transparent flex flex-col justify-center px-20">
             <p className="text-white text-xl mb-1">{s.titleTop}</p>
 
             <h1 className="text-white text-4xl font-bold max-w-xl leading-tight">
@@ -71,7 +70,7 @@ export default function Carousel() {
             </h1>
 
             {/* FIX: Smaller button */}
-            <button className="mt-5 border border-white px-4 py-2 text-sm rounded text-white hover:bg-white hover:text-[#003594] w-max">
+            <button className="mt-5 border border-white px-4 py-2 text-sm rounded text-white hover:bg-white hover:text-[#9f1414] w-max">
               {s.btn}
             </button>
           </div>

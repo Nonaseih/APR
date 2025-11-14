@@ -21,10 +21,11 @@ import FlightSearchBox from "../components/FlightSearch/FlightSearchBox";
 import StudentFare from "../components/Highlights/StudentFare";
 import SmoothConnections from "../components/Highlights/SmoothConnections";
 
-import QuickServicesStrip from "../components/QuickServicesStrip";
-
 import Disclaimer from "../components/Disclaimer";
+
 import AdditionalBenefits from "../components/AdditionalBenefits";
+
+import QuickServicesStrip from "../components/QuickServicesStrip";
 
 import Destinations from "../components/Destinations";
 
@@ -48,19 +49,26 @@ export default function Home() {
       <FlightSearchBox />
 
       {/* STUDENT FARE + SMOOTH CONNECTIONS */}
-      <div className="max-w-[1300px] mx-auto px-6 mt-16 mb-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <StudentFare />
-        <SmoothConnections />
-      </div>
+<div className="max-w-[1100px] mx-auto px-6 mt-16 mb-20">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div className="scale-[1.06]">
+      <StudentFare />
+    </div>
+    <div className="scale-[1.06]">
+      <SmoothConnections />
+    </div>
+  </div>
+</div>
 
       {/* QUICK SERVICES STRIP */}
       <QuickServicesStrip />
 
       {/* DISCLAIMER + ADDITIONAL BENEFITS */}
-      <div className="max-w-[1300px] mx-auto px-6">
-        <Disclaimer />
-        <AdditionalBenefits />
-      </div>
+<div className="max-w-[1100px] mx-auto px-6">
+  <Disclaimer />
+  <AdditionalBenefits />
+</div>
+
 
       <Destinations />
 

@@ -2,16 +2,16 @@
     * @description      : 
     * @author           : fortu
     * @group            : 
-    * @created          : 11/11/2025 - 10:19:02
+    * @created          : 14/11/2025 - 14:16:20
     * 
     * MODIFICATION LOG
     * - Version         : 1.0.0
-    * - Date            : 11/11/2025
+    * - Date            : 14/11/2025
     * - Author          : fortu
     * - Modification    : 
 **/
 /**
- * Standard Dropdown — Air Peace Accurate
+ * Standard Dropdown — Air Peace Accurate (Lowered)
  */
 
 import { motion } from "framer-motion";
@@ -23,8 +23,8 @@ export default function Dropdown({ items }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 10 }}
       className="
-        absolute left-0 mt-2 bg-white rounded shadow-lg w-56 py-3 z-50
-        border-t-4 border-[#be3a34]   /* red top line */
+        absolute left-0 mt-12 bg-white rounded shadow-lg w-56 py-3 z-50
+        border-t-4 border-[#be3a34]
       "
     >
       {items.map((it) => (

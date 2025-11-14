@@ -21,7 +21,7 @@ export default function StoryAndMobile() {
       {/* LEFT — STORY */}
       <div className="relative rounded-xl overflow-hidden h-[420px]">
         <img
-          src="https://flyairpeace.com/wp-content/uploads/2024/05/our-story.webp"
+          src="/images/Story.webp"
           className="w-full h-full object-cover"
           alt="Our story"
         />

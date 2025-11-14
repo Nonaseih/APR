@@ -27,7 +27,7 @@ export default function Newsletter() {
     <div
       className="max-w-[1100px] mx-auto px-6 mt-20 mb-24 rounded-3xl overflow-hidden"
       style={{
-        backgroundImage: "url('/images/brg1.png')",
+        backgroundImage: "url('https://i.pinimg.com/1200x/e9/d2/25/e9d225b5f7c997bda515f0f2077c1feb.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
